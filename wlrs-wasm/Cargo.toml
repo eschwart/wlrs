@@ -1,0 +1,19 @@
+[package]
+name = "wlrs-wasm"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+log = { version = "0.4.27", default-features = false }
+wasm-logger = { version = "0.2.0", default-features = false }
+web-sys = { version = "0.3.77", default-features = false, features = ["HtmlInputElement", "CssStyleDeclaration"] }
+yew = { version = "0.21.0", default-features = false, features = ["csr"] }
+
+[build-dependencies]
+dotenv = { version = "0.15.0", default-features = false }
+
+[profile.release]
+opt-level = "z"
+codegen-units = 1
+panic = "abort"
+lto = true

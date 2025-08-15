@@ -1,0 +1,16 @@
+[package]
+name = "wlrs"
+version = "0.1.0"
+edition = "2024"
+
+[workspace]
+resolver = "2"
+members = ["wlrs-*"]
+
+[build-dependencies]
+dotenv = "0.15.0"
+wlrs-auth = { path = "wlrs-auth", features = ["build"] }
+
+[profile.release]
+lto = true
+codegen-units = 1

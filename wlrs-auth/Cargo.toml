@@ -1,0 +1,14 @@
+[package]
+name = "wlrs-auth"
+version = "0.1.0"
+edition = "2024"
+
+[features]
+build = ["argon2/std"]
+
+[dependencies]
+argon2 = "0.5.3"
+
+[profile.release]
+codegen-units = 1
+lto = true
