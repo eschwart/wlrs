@@ -1,4 +1,4 @@
-# wlrs-wasm
+# wlrs-server
 
 ## Build
 ```bash
